@@ -70,7 +70,7 @@ const About = () => {
         >
           <div className="aspect-square max-w-sm mx-auto">
             <img
-              src="/src/images/IMG_8110~2.jpg"
+              src="/images/IMG_8110~2.jpg"
               alt="Habtewold Degfie"
               className="rounded-2xl shadow-xl w-full h-full object-cover"
             />
