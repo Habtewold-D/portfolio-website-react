@@ -33,7 +33,7 @@ const Home = () => {
           className="flex flex-wrap justify-center gap-4"
         >
           <a
-            href="/src/data/Habtewold-Degfie-Worku-FlowCV-Resume-20250524 (1).pdf"
+            href="/resume.pdf"
             download="Habtewold-Degfie-Resume.pdf"
             className="flex items-center gap-2 px-6 py-3 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors"
           >

@@ -13,33 +13,32 @@ const Projects = () => {
   const projects: Project[] = [
     {
       title: 'Gym App',
-      image: '/src/images/gym.png',
+      image: '/images/gym.png',
       link: 'https://github.com/Nesrellah/GymmanagementV2'
     },
     {
       title: 'Bus management website',
-      image: '/src/images/bus.png',
+      image: '/images/bus.png',
       link: 'https://github.com/deve1070/Bus-tracking-app'
     },
     {
       title: 'Shoool management website',
-      image: '/src/images/school.png',
+      image: '/images/school.png',
       link: 'https://github.com/BirukSe/School-Management-System'
     },
     {
       title: 'Weather of cities',
-      image: '/src/images/pj1.png',
+      image: '/images/pj1.png',
       link: 'https://github.com/Habtewold-D/weatherOf-Cities'
     },
     {
       title: 'Cloth shop website',
-      image: '/src/images/cloth.png',
+      image: '/images/cloth.png',
       link: 'https://github.com/Habtewold-D/ClothShop'
     },
     {
-      
       title: 'Simple Calculator',
-      image: '/src/images/pj2.png',
+      image: '/images/pj2.png',
       link: 'https://github.com/Habtewold-D/simpleCalculator'
     }
   ];
