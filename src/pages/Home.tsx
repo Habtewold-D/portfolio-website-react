@@ -12,7 +12,9 @@ const Home = () => {
           transition={{ duration: 0.5 }}
           className="space-y-6"
         >
-          
+          <h1></h1>
+          <h1></h1>
+          <h1></h1>
           <h1 className="text-5xl md:text-6xl font-bold text-black">
             Hi, I'm <span className="text-black-500">Habtewold Degfie</span>
           </h1>
