@@ -11,6 +11,11 @@ const Projects = () => {
   const [showAll, setShowAll] = useState(false);
 
   const projects: Project[] = [
+     {
+      title: 'TOUR-APP',
+      image: '/images/tour-mobile.png',
+      link: 'https://github.com/Habtewold-D/Tour-App-Flutter'
+    },
     {
       title: 'Gym App',
       image: '/images/gym.png',
@@ -20,26 +25,22 @@ const Projects = () => {
       title: 'Bus management website',
       image: '/images/bus.png',
       link: 'https://github.com/deve1070/Bus-tracking-app'
+    },   
+    {
+      title: 'Cloth shop website',
+      image: '/images/Screenshot 2025-07-09 012044.png',
+      link: 'https://github.com/Habtewold-D/ClothShop'
     },
+    {
+      title: 'Tour-website',
+      image: '/images/Screenshot 2025-07-09 011457.png',
+      link: 'https://github.com/Habtewold-D/Tour-App-Flutter'
+    },
+
     {
       title: 'Shoool management website',
       image: '/images/school.png',
       link: 'https://github.com/BirukSe/School-Management-System'
-    },
-    {
-      title: 'Weather of cities',
-      image: '/images/pj1.png',
-      link: 'https://github.com/Habtewold-D/weatherOf-Cities'
-    },
-    {
-      title: 'Cloth shop website',
-      image: '/images/cloth.png',
-      link: 'https://github.com/Habtewold-D/ClothShop'
-    },
-    {
-      title: 'Simple Calculator',
-      image: '/images/pj2.png',
-      link: 'https://github.com/Habtewold-D/simpleCalculator'
     }
   ];
 
