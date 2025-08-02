@@ -2,6 +2,10 @@ import { motion } from 'framer-motion';
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaJava, FaPython } from 'react-icons/fa';
 import { SiFlutter, SiKotlin, SiNestjs } from 'react-icons/si';
 
+interface AboutProps {
+  isDarkMode: boolean;
+}
+
 interface Skill {
   name: string;
   icon: JSX.Element;
@@ -12,7 +16,7 @@ interface ProfessionalSkill {
   description: string;
 }
 
-const About = () => {
+const About: React.FC<AboutProps> = ({ isDarkMode }) => {
   const technicalSkills: Skill[] = [
     { name: 'JavaScript', icon: <FaJs className="text-4xl" /> },
     { name: 'React', icon: <FaReact className="text-4xl" /> },
@@ -46,21 +50,21 @@ const About = () => {
   ];
 
   return (
-    <div className="py-8">
+    <div className="py-8 px-4">
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         className="text-center mb-12"
       >
-        <h1 className="text-4xl font-bold text-black mb-2">About Me</h1>
+        <h1 className="text-4xl font-bold mb-2">About Me</h1>
       </motion.section>
 
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="grid md:grid-cols-2 gap-12 mb-16 items-center"
+        className="grid md:grid-cols-2 gap-12 mb-16 items-center max-w-6xl mx-auto"
       >
         <motion.div 
           className="relative"
@@ -83,7 +87,7 @@ const About = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="space-y-6"
         >
-          <div className="space-y-4 text-gray-600">
+          <div className="space-y-4 text-gray-600 dark:text-gray-300">
             <motion.p 
               className="leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
@@ -112,10 +116,10 @@ const About = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.4 }}
-        className="space-y-12"
+        className="space-y-12 max-w-6xl mx-auto"
       >
         <div>
-          <h2 className="text-3xl font-bold text-black text-center mb-8">Technical Skills</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">Technical Skills</h2>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
             {technicalSkills.map((skill, index) => (
               <motion.div
@@ -124,17 +128,19 @@ const About = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 * index }}
                 whileHover={{ scale: 1.05, rotate: 5 }}
-                className="flex flex-col items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-all"
+                className={`flex flex-col items-center p-4 rounded-lg shadow-md hover:shadow-lg transition-all ${
+                  isDarkMode ? 'bg-gray-800' : 'bg-white'
+                }`}
               >
                 <div className="text-orange-500 mb-2">{skill.icon}</div>
-                <span className="text-gray-700 font-medium">{skill.name}</span>
+                <span className="text-gray-700 dark:text-gray-300 font-medium">{skill.name}</span>
               </motion.div>
             ))}
           </div>
         </div>
 
         <div>
-          <h2 className="text-3xl font-bold text-black text-center mb-8">Professional Skills</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">Professional Skills</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {professionalSkills.map((skill, index) => (
               <motion.div
@@ -143,10 +149,12 @@ const About = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 * index }}
                 whileHover={{ scale: 1.02, y: -5 }}
-                className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-all"
+                className={`p-6 rounded-lg shadow-md hover:shadow-lg transition-all ${
+                  isDarkMode ? 'bg-gray-800' : 'bg-white'
+                }`}
               >
-                <h3 className="text-xl font-semibold text-black mb-2">{skill.name}</h3>
-                <p className="text-gray-600">{skill.description}</p>
+                <h3 className="text-xl font-semibold mb-2">{skill.name}</h3>
+                <p className="text-gray-600 dark:text-gray-300">{skill.description}</p>
               </motion.div>
             ))}
           </div>
