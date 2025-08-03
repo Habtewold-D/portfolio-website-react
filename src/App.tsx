@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -75,7 +74,7 @@ function App() {
       
       <main>
         <section id="home" className="min-h-screen">
-          <Home isDarkMode={isDarkMode} />
+          <Home />
         </section>
         
         <section id="about" className="min-h-screen">

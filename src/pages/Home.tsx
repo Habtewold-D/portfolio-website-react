@@ -1,11 +1,7 @@
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaTelegram, FaInstagram, FaDownload } from 'react-icons/fa';
 
-interface HomeProps {
-  isDarkMode: boolean;
-}
-
-const Home: React.FC<HomeProps> = ({ isDarkMode }) => {
+const Home: React.FC = () => {
   return (
     <div className="min-h-screen flex items-center justify-center px-4">
       <div className="max-w-4xl mx-auto text-center space-y-8">
