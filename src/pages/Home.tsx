@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaTelegram, FaInstagram, FaDownload } from 'react
 
 const Home: React.FC = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center px-4">
+    <div className="min-h-screen flex items-center justify-center px-4 pt-38 sm:pt-40">
       <div className="max-w-4xl mx-auto text-center space-y-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -11,13 +11,13 @@ const Home: React.FC = () => {
           transition={{ duration: 0.5 }}
           className="space-y-6"
         >
-          <h1 className="text-5xl md:text-6xl font-bold">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
             Hi, I'm <span className="text-orange-500">Habtewold Degfie</span>
           </h1>
-          <h2 className="text-2xl md:text-3xl text-gray-600 dark:text-gray-300">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-600 dark:text-gray-300">
             <span className="text-orange-500">Full Stack Website & Application Developer</span>
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-base sm:text-lg">
             I create beautiful, user-friendly applications that connect people and ideas.
             Specializing in both frontend and backend development, I bring digital experiences to life.
           </p>
