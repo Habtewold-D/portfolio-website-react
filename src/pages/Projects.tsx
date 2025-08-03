@@ -27,7 +27,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
       id: 'tour-app',
       title: 'Tour Booking App',
       description: 'Built a tour booking app using Flutter and Firebase with real payment integration (Chapa, SantimPay). Features include tour package browsing/purchase, in-app and push notifications (Firebase), and dashboards for companies and admins. Admin panel is available on both mobile and web with full feature parity.',
-      image: '/images/tour-mobile.png',
+      image: '/images/tourapp.jpg',
       category: 'mobile',
       technologies: ['Flutter', 'Firebase', 'Chapa', 'SantimPay', 'Push Notifications', 'Node.js', 'Express', 'MongoDB'],
       githubLink: 'https://github.com/Habtewold-D/Tour-App-Flutter'
@@ -36,7 +36,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
       id: 'gym-app',
       title: 'Gym Management App',
       description: 'Developed a Gym Management Application for Android using Kotlin and Jetpack Compose. The app enables gym staff to manage members efficiently by assigning personalized workout plans, listing upcoming gym events, tracking trainee progress, and viewing detailed member profiles. Focused on building an intuitive user interface and implementing core functionalities to support gym operations digitally.',
-      image: '/images/gym.png',
+      image: '/images/gymapp.jpg',
       category: 'mobile',
       technologies: ['Kotlin', 'Jetpack Compose', 'Android', 'MySQL'],
       githubLink: 'https://github.com/Nesrellah/GymmanagementV2'
@@ -48,16 +48,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
       image: '/images/chatapp.jpg',
       category: 'mobile',
       technologies: ['Flutter', 'Node.js', 'Socket.io'],
-      githubLink: 'https://github.com/Habtewold-D/chat-app'
-    },
-    {
-      id: 'bus-tracking',
-      title: 'Bus Tracking System',
-      description: 'Real-time bus tracking and management system with route optimization and passenger information.',
-      image: '/images/bus.png',
-      category: 'website',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Socket.io'],
-      githubLink: 'https://github.com/deve1070/Bus-tracking-app'
+      githubLink: 'https://github.com/Habtewold-D/Chat-App-Flutter'
     },
     {
       id: 'cloth-shop',
@@ -69,25 +60,37 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
       githubLink: 'https://github.com/Habtewold-D/ClothShop',
       liveLink: 'https://www.bernosdesign.com'
     },
+    
     {
-      id: 'tour-website',
-      title: 'Tour Admin Dashboard',
-      description: 'Admin dashboard for the tour booking app. The admin can use both the website and mobile application to manage tour packages, view bookings, handle payments, and oversee the entire tour booking system. Provides full administrative control with comprehensive analytics and management tools.',
-      image: '/images/Screenshot 2025-07-09 011457.png',
+      id: 'restaurant-management',
+      title: 'Restaurant Management System',
+      description: 'Developed a full-stack Restaurant Management System using Next.js, TypeScript, and Firebase (Auth, Firestore). The app features a customer ordering system with menu categories, cart, checkout, and real-time order tracking. Built an admin dashboard for managing menu items, categories, orders, reviews, and analytics. Implemented role-based authentication with Firebase Auth and integrated Stripe and PayPal for secure payments. Used Cloudinary for image management.',
+      image: '/images/restaurant.png',
       category: 'website',
-      technologies: ['EJS', 'Tailwind CSS', 'Node.js', 'MongoDB', 'Firebase'],
-      githubLink: 'https://github.com/Habtewold-D/Tour-App-Flutter',
-      liveLink: 'https://tour-website-demo.vercel.app'
+      technologies: ['Next.js', 'TypeScript', 'Firebase', 'Stripe', 'PayPal', 'Cloudinary'],
+      githubLink: 'https://github.com/Habtewold-D/RestaurantWebsite',
+      liveLink: 'https://restaurant-website-one-green.vercel.app/'
     },
     {
-      id: 'school-management',
-      title: 'School Management System',
-      description: 'Comprehensive school management platform with student records, attendance tracking, and grade management.',
-      image: '/images/school.png',
+      id: 'movie-search',
+      title: 'Movie Search Website with AI Chatbot',
+      description: 'Built a movie search and discovery app using the TMDB API, with features including favorites, watchlist, and commenting. Integrated a chatbot that suggests movies based on genre, title, release date, and user preferences.',
+      image: '/images/movie.png',
       category: 'website',
-      technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
-      githubLink: 'https://github.com/BirukSe/School-Management-System',
-      liveLink: 'https://school-management-demo.vercel.app'
+      technologies: ['React', 'Node.js', 'TMDB API', 'Chatbot'],
+      githubLink: 'https://github.com/Habtewold-D/movie-database',
+      liveLink: 'https://movie-database-one-tawny.vercel.app/'
+    },
+
+    {
+      id: 'whiteboard',
+      title: 'Collaborative Whiteboard',
+      description: 'A real-time collaborative whiteboard app built with React, React-Konva, Socket.io, and Node.js. Draw, sketch, and collaborate live with multiple users, with persistent storage, user cursors, and multiple drawing tools.',
+      image: '/images/canvas.png',
+      category: 'website',
+      technologies: ['React', 'React-Konva', 'Socket.io', 'Node.js'],
+      githubLink: 'https://github.com/Habtewold-D/realtime-collaboration-canvas',
+      liveLink: 'https://realtime-collaboration-canvas.vercel.app/'
     },
     {
       id: 'weather-app',
@@ -96,39 +99,40 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
       image: '/images/pj1.png',
       category: 'website',
       technologies: ['React', 'CSS', 'OpenWeatherMap API'],
-      githubLink: 'https://github.com/Habtewold-D/weather-app',
+      githubLink: 'https://github.com/Habtewold-D/weatherOf-Cities',
       liveLink: 'https://weather-of-cities.vercel.app/'
     },
     {
-      id: 'restaurant-management',
-      title: 'Restaurant Management System',
-      description: 'Developed a full-stack Restaurant Management System using Next.js, TypeScript, and Firebase (Auth, Firestore). The app features a customer ordering system with menu categories, cart, checkout, and real-time order tracking. Built an admin dashboard for managing menu items, categories, orders, reviews, and analytics. Implemented role-based authentication with Firebase Auth and integrated Stripe and PayPal for secure payments. Used Cloudinary for image management.',
-      image: '/images/restaurant.png',
+      id: 'tour-website',
+      title: 'Tour Admin Dashboard',
+      description: 'Admin dashboard for the tour booking app. The admin can use both the website and mobile application to manage tour packages, view bookings, handle payments, and oversee the entire tour booking system. Provides full administrative control with comprehensive analytics and management tools.',
+      image: '/images/Screenshot 2025-07-09 011457.png',
       category: 'website',
-      technologies: ['Next.js', 'TypeScript', 'Firebase', 'Stripe', 'PayPal', 'Cloudinary'],
-      githubLink: 'https://github.com/Habtewold-D/restaurant-management',
-      liveLink: 'https://restaurant-website-one-green.vercel.app/'
+      technologies: ['EJS', 'Tailwind CSS', 'Node.js', 'MongoDB', 'Firebase'],
+      githubLink: 'https://github.com/Habtewold-D/Tour-App-Flutter'
     },
     {
-      id: 'movie-search',
-      title: 'Movie Search Website',
-      description: 'Built a movie search and discovery app using the TMDB API, with features including favorites, watchlist, and commenting. Integrated a chatbot that suggests movies based on genre, title, release date, and user preferences.',
-      image: '/images/movie.png',
+      id: 'bus-tracking',
+      title: 'Bus Tracking System',
+      description: 'Real-time bus tracking and management system with route optimization and passenger information.',
+      image: '/images/bus.png',
       category: 'website',
-      technologies: ['React', 'Node.js', 'TMDB API', 'Chatbot'],
-      githubLink: 'https://github.com/Habtewold-D/movie-search',
-      liveLink: 'https://movie-database-one-tawny.vercel.app/'
+      technologies: ['React', 'Node.js', 'MongoDB', 'Socket.io'],
+      githubLink: 'https://github.com/deve1070/Bus-tracking-app'
     },
+    
+    
     {
-      id: 'whiteboard',
-      title: 'Collaborative Whiteboard',
-      description: 'A real-time collaborative whiteboard app built with React, React-Konva, Socket.io, and Node.js. Draw, sketch, and collaborate live with multiple users, with persistent storage, user cursors, and multiple drawing tools.',
-      image: '/images/pj2.png',
+      id: 'school-management',
+      title: 'School Management System',
+      description: 'Comprehensive school management platform with student records, attendance tracking, and grade management.',
+      image: '/images/school.png',
       category: 'website',
-      technologies: ['React', 'React-Konva', 'Socket.io', 'Node.js'],
-      githubLink: 'https://github.com/Habtewold-D/collaborative-whiteboard',
-      liveLink: 'https://whiteboard-demo.vercel.app'
+      technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
+      githubLink: 'https://github.com/BirukSe/School-Management-System'
     }
+    
+    
   ];
 
   const getFilteredProjects = () => {
