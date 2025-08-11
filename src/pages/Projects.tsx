@@ -130,7 +130,17 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
       category: 'website',
       technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
       githubLink: 'https://github.com/BirukSe/School-Management-System'
+    },
+    {
+      id: 'Home rental Mobile App',
+      title: 'Home Rental Mobile App',
+      description: 'RENT is a modern room rental and roommate matching platform with dedicated roles for Admin, Landlord, and Renter. It features secure authentication, landlord verification, room listings with availability/approval, and a matching system where users create/join groups and receive notifications. The Admin suite includes a responsive dashboard and anlytics.',
+      image: '/images/rent.jpg',
+      category: 'mobile',
+      technologies: ['Flutter', 'Node.js', 'Express', 'PostgreSQL', 'Chapa'],
+      githubLink: 'https://github.com/Habtewold-D/Rent'
     }
+
     
     
   ];
