@@ -24,6 +24,15 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
 
   const projects: Project[] = [
     {
+      id: 'e-learning-platform',
+      title: 'E-learning Platform',
+      description: 'Built E-learning mobile application supporting role-based access with course creation, content uploads, enrollment approval, exams with grading and results, live classes, push notifications, administrative analytics, and teacher management , and an AI-powered assistant for learning support.',
+      image: '/images/elearning.png',
+      category: 'mobile',
+      technologies: ['Flutter', 'FastAPI', 'PostgreSQL', 'chromaDB', 'sentence transformer', 'Firebase', 'Jetsi', 'Push Notifications'],
+      githubLink: 'https://github.com/Habtewold-D/E-learning-Flutter'
+    },
+    {
       id: 'tour-app',
       title: 'Tour Booking App',
       description: 'Built a tour booking app using Flutter and Firebase with real payment integration (Chapa, SantimPay). Features include tour package browsing/purchase, in-app and push notifications (Firebase), and dashboards for companies and admins. Admin panel is available on both mobile and web with full feature parity.',
@@ -49,18 +58,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
       category: 'mobile',
       technologies: ['Flutter', 'Node.js', 'Socket.io'],
       githubLink: 'https://github.com/Habtewold-D/Chat-App-Flutter'
-    },
-    {
-      id: 'cloth-shop',
-      title: 'E-Commerce Clothing Store',
-      description: 'A comprehensive e-commerce website for clothing with complete product catalog featuring category filtering, and advanced product search functionality. The website provides detailed product information with multiple images and descriptions, responsive design for all devices.',
-      image: '/images/cloth.png',
-      category: 'website',
-      technologies: ['React', 'Express', 'MongoDB', 'Mongoose', 'Multer'],
-      githubLink: 'https://github.com/Habtewold-D/ClothShop',
-      liveLink: 'https://www.bernosdesign.com'
-    },
-    
+    },    
     {
       id: 'restaurant-management',
       title: 'Restaurant Management System',
@@ -81,7 +79,6 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
       githubLink: 'https://github.com/Habtewold-D/movie-database',
       liveLink: 'https://movie-database-one-tawny.vercel.app/'
     },
-
     {
       id: 'whiteboard',
       title: 'Collaborative Whiteboard',
@@ -91,6 +88,16 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
       technologies: ['React', 'React-Konva', 'Socket.io', 'Node.js'],
       githubLink: 'https://github.com/Habtewold-D/realtime-collaboration-canvas',
       liveLink: 'https://realtime-collaboration-canvas.vercel.app/'
+    },
+    {
+      id: 'cloth-shop',
+      title: 'E-Commerce Clothing Store',
+      description: 'A comprehensive e-commerce website for clothing with complete product catalog featuring category filtering, and advanced product search functionality. The website provides detailed product information with multiple images and descriptions, responsive design for all devices.',
+      image: '/images/cloth.png',
+      category: 'website',
+      technologies: ['React', 'Express', 'MongoDB', 'Mongoose', 'Multer'],
+      githubLink: 'https://github.com/Habtewold-D/ClothShop',
+      liveLink: 'https://www.bernosdesign.com'
     },
     {
       id: 'weather-app',
