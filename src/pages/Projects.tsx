@@ -41,18 +41,10 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
       technologies: ['Flutter', 'Firebase', 'Chapa', 'SantimPay', 'Push Notifications', 'Node.js', 'Express', 'MongoDB'],
       githubLink: 'https://github.com/Habtewold-D/Tour-App-Flutter'
     },
-    {
-      id: 'gym-app',
-      title: 'Gym Management App',
-      description: 'Developed a Gym Management Application for Android using Kotlin and Jetpack Compose. The app enables gym staff to manage members efficiently by assigning personalized workout plans, listing upcoming gym events, tracking trainee progress, and viewing detailed member profiles. Focused on building an intuitive user interface and implementing core functionalities to support gym operations digitally.',
-      image: '/images/gymapp.jpg',
-      category: 'mobile',
-      technologies: ['Kotlin', 'Jetpack Compose', 'Android', 'MySQL'],
-      githubLink: 'https://github.com/Nesrellah/GymmanagementV2'
-    },
+
     {
       id: 'chat-app',
-      title: 'Chat App',
+      title: 'Real Time messaging App',
       description: 'Built a real-time chat application using Flutter (frontend) and Node.js with Socket.IO (backend). The app supports sending text and image messages, with core chat features including edit, delete, reply, and forward.',
       image: '/images/chatapp.jpg',
       category: 'mobile',
@@ -98,6 +90,15 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
       technologies: ['React', 'Express', 'MongoDB', 'Mongoose', 'Multer'],
       githubLink: 'https://github.com/Habtewold-D/ClothShop',
       liveLink: 'https://www.bernosdesign.com'
+    },
+    {
+      id: 'gym-app',
+      title: 'Gym Management App',
+      description: 'Developed a Gym Management Application for Android using Kotlin and Jetpack Compose. The app enables gym staff to manage members efficiently by assigning personalized workout plans, listing upcoming gym events, tracking trainee progress, and viewing detailed member profiles. Focused on building an intuitive user interface and implementing core functionalities to support gym operations digitally.',
+      image: '/images/gymapp.jpg',
+      category: 'mobile',
+      technologies: ['Kotlin', 'Jetpack Compose', 'Android', 'MySQL'],
+      githubLink: 'https://github.com/Nesrellah/GymmanagementV2'
     },
     {
       id: 'weather-app',
