@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaJava, FaPython } from 'react-icons/fa';
-import { SiFlutter, SiKotlin, SiNestjs } from 'react-icons/si';
+import { FaJs, FaReact, FaNodeJs, FaJava, FaPython } from 'react-icons/fa';
+import { SiFlutter, SiKotlin, SiNestjs, SiNextdotjs, SiFastapi } from 'react-icons/si';
 
 interface AboutProps {
   isDarkMode: boolean;
@@ -19,15 +19,15 @@ interface ProfessionalSkill {
 const About: React.FC<AboutProps> = ({ isDarkMode }) => {
   const technicalSkills: Skill[] = [
     { name: 'JavaScript', icon: <FaJs className="text-4xl" /> },
-    { name: 'React', icon: <FaReact className="text-4xl" /> },
-    { name: 'Node.js', icon: <FaNodeJs className="text-4xl" /> },
-    { name: 'Java', icon: <FaJava className="text-4xl" /> },
     { name: 'Python', icon: <FaPython className="text-4xl" /> },
+    { name: 'Java', icon: <FaJava className="text-4xl" /> },
+    { name: 'React', icon: <FaReact className="text-4xl" /> },
+    { name: 'NextJS', icon: <SiNextdotjs className="text-4xl" /> },
+    { name: 'Node.js', icon: <FaNodeJs className="text-4xl" /> },
+    { name: 'FastAPI', icon: <SiFastapi className="text-4xl" /> },
     { name: 'Flutter', icon: <SiFlutter className="text-4xl" /> },
     { name: 'Kotlin', icon: <SiKotlin className="text-4xl" /> },
-    { name: 'NestJS', icon: <SiNestjs className="text-4xl" /> },
-    { name: 'HTML5', icon: <FaHtml5 className="text-4xl" /> },
-    { name: 'CSS3', icon: <FaCss3Alt className="text-4xl" /> }
+    { name: 'NestJS', icon: <SiNestjs className="text-4xl" /> }
   ];
 
   const professionalSkills: ProfessionalSkill[] = [
