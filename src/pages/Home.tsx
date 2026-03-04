@@ -69,7 +69,7 @@ const Home: React.FC = () => {
           </motion.a>
           <motion.a
             whileHover={{ scale: 1.2, y: -5 }}
-            href="https://www.linkedin.com/in/habtewold-degfie-396041339/"
+            href="https://www.linkedin.com/in/habtewold-degfie-972084379/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-2xl text-gray-600 dark:text-gray-400 hover:text-orange-500 transition-colors"
