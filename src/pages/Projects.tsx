@@ -50,7 +50,17 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
       category: 'mobile',
       technologies: ['Flutter', 'Node.js', 'Socket.io'],
       githubLink: 'https://github.com/Habtewold-D/Chat-App-Flutter'
-    },    
+    },  
+    {
+      id: 'cloth-shop',
+      title: 'E-Commerce Clothing Store',
+      description: 'A comprehensive e-commerce website for clothing with complete product catalog featuring category filtering, and advanced product search functionality. The website provides detailed product information with multiple images and descriptions, responsive design for all devices.',
+      image: '/images/cloth.png',
+      category: 'website',
+      technologies: ['React', 'Express', 'MongoDB', 'Mongoose', 'Multer'],
+      githubLink: 'https://github.com/Habtewold-D/ClothShop',
+      liveLink: 'https://www.bernosdesign.com'
+    },  
     {
       id: 'restaurant-management',
       title: 'Restaurant Management System',
@@ -81,16 +91,7 @@ const Projects: React.FC<ProjectsProps> = ({ isDarkMode }) => {
       githubLink: 'https://github.com/Habtewold-D/realtime-collaboration-canvas',
       liveLink: 'https://realtime-collaboration-canvas.vercel.app/'
     },
-    {
-      id: 'cloth-shop',
-      title: 'E-Commerce Clothing Store',
-      description: 'A comprehensive e-commerce website for clothing with complete product catalog featuring category filtering, and advanced product search functionality. The website provides detailed product information with multiple images and descriptions, responsive design for all devices.',
-      image: '/images/cloth.png',
-      category: 'website',
-      technologies: ['React', 'Express', 'MongoDB', 'Mongoose', 'Multer'],
-      githubLink: 'https://github.com/Habtewold-D/ClothShop',
-      liveLink: 'https://www.bernosdesign.com'
-    },
+    
     {
       id: 'gym-app',
       title: 'Gym Management App',
