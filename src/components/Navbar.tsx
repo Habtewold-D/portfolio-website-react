@@ -35,8 +35,8 @@ const Navbar: FC<NavbarProps> = ({ isDarkMode, setIsDarkMode, activeSection, scr
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed w-full z-50 transition-all duration-500 ${isScrolled
-          ? 'py-3 glass shadow-2xl'
-          : 'py-5 bg-transparent'
+        ? 'py-3 glass shadow-2xl'
+        : 'py-5 bg-transparent'
         }`}
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
@@ -48,8 +48,8 @@ const Navbar: FC<NavbarProps> = ({ isDarkMode, setIsDarkMode, activeSection, scr
             onClick={() => scrollToSection('home')}
           >
             <span className={`text-3xl font-black tracking-tighter transition-all duration-300 ${isScrolled
-                ? 'text-gradient'
-                : 'text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]'
+              ? 'text-gradient'
+              : 'text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]'
               }`}>
               Habtewold
             </span>
@@ -79,8 +79,8 @@ const Navbar: FC<NavbarProps> = ({ isDarkMode, setIsDarkMode, activeSection, scr
                 whileTap={{ scale: 0.9 }}
                 onClick={() => setIsDarkMode(!isDarkMode)}
                 className={`p-3 rounded-2xl transition-all duration-300 ${isScrolled
-                    ? 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-yellow-400'
-                    : 'bg-white/10 text-white hover:bg-white/20'
+                  ? 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-yellow-400'
+                  : 'bg-white/10 text-white hover:bg-white/20'
                   }`}
               >
                 {isDarkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
@@ -94,8 +94,8 @@ const Navbar: FC<NavbarProps> = ({ isDarkMode, setIsDarkMode, activeSection, scr
               whileTap={{ scale: 0.9 }}
               onClick={() => setIsDarkMode(!isDarkMode)}
               className={`p-2 rounded-xl transition-all duration-300 ${isScrolled
-                  ? 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-yellow-400'
-                  : 'bg-white/10 text-white'
+                ? 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-yellow-400'
+                : 'bg-white/10 text-white'
                 }`}
             >
               {isDarkMode ? <FaSun size={18} /> : <FaMoon size={18} />}
@@ -103,8 +103,8 @@ const Navbar: FC<NavbarProps> = ({ isDarkMode, setIsDarkMode, activeSection, scr
 
             <button
               className={`p-2 rounded-xl transition-all duration-300 ${isScrolled
-                  ? 'text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
-                  : 'text-white hover:bg-white/10'
+                ? 'text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
+                : 'text-white hover:bg-white/10'
                 }`}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
@@ -171,12 +171,12 @@ const NavLink = ({
     whileTap={{ scale: 0.95 }}
     onClick={onClick}
     className={`relative px-6 py-2.5 rounded-xl font-bold transition-all duration-300 ${isActive
-        ? isScrolled
-          ? 'text-orange-500 bg-orange-500/10'
-          : 'text-white bg-white/20'
-        : isScrolled
-          ? 'text-gray-500 dark:text-gray-400 hover:text-orange-500'
-          : 'text-white/70 hover:text-white'
+      ? isScrolled
+        ? 'text-orange-500 bg-orange-500/10'
+        : 'text-white bg-white/20'
+      : isScrolled
+        ? 'text-gray-500 dark:text-gray-400 hover:text-orange-500'
+        : 'text-white/70 hover:text-white'
       }`}
   >
     {label}
@@ -205,12 +205,12 @@ const MobileNavLink = ({
     whileTap={{ scale: 0.95 }}
     onClick={onClick}
     className={`block w-full text-left px-4 py-3 rounded-xl transition-all duration-300 font-semibold ${isActive
-        ? isDarkMode
-          ? 'text-orange-400 bg-orange-400/10 border border-orange-400/20'
-          : 'text-orange-500 bg-orange-500/10 border border-orange-500/20'
-        : isDarkMode
-          ? 'text-gray-300 hover:text-white hover:bg-gray-800'
-          : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+      ? isDarkMode
+        ? 'text-orange-400 bg-orange-400/10 border border-orange-400/20'
+        : 'text-orange-500 bg-orange-500/10 border border-orange-500/20'
+      : isDarkMode
+        ? 'text-gray-300 hover:text-white hover:bg-gray-800'
+        : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
       }`}
   >
     {label}

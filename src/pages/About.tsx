@@ -8,7 +8,7 @@ interface AboutProps {
 
 interface Skill {
   name: string;
-  icon: JSX.Element;
+  icon: React.ReactNode;
 }
 
 interface ProfessionalSkill {
@@ -66,7 +66,7 @@ const About: React.FC<AboutProps> = ({ isDarkMode }) => {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="grid md:grid-cols-2 gap-12 mb-16 items-center max-w-6xl mx-auto"
       >
-        <motion.div 
+        <motion.div
           className="relative"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -80,7 +80,7 @@ const About: React.FC<AboutProps> = ({ isDarkMode }) => {
             />
           </div>
         </motion.div>
-        
+
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -88,7 +88,7 @@ const About: React.FC<AboutProps> = ({ isDarkMode }) => {
           className="space-y-6"
         >
           <div className="space-y-4 text-gray-600 dark:text-gray-300">
-            <motion.p 
+            <motion.p
               className="leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -98,7 +98,7 @@ const About: React.FC<AboutProps> = ({ isDarkMode }) => {
               I create comprehensive web solutions that are not only visually appealing but also highly
               functional and user-friendly.
             </motion.p>
-            <motion.p 
+            <motion.p
               className="leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -128,9 +128,8 @@ const About: React.FC<AboutProps> = ({ isDarkMode }) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 * index }}
                 whileHover={{ scale: 1.05, rotate: 5 }}
-                className={`flex flex-col items-center p-4 rounded-lg shadow-md hover:shadow-lg transition-all ${
-                  isDarkMode ? 'bg-gray-800' : 'bg-white'
-                }`}
+                className={`flex flex-col items-center p-4 rounded-lg shadow-md hover:shadow-lg transition-all ${isDarkMode ? 'bg-gray-800' : 'bg-white'
+                  }`}
               >
                 <div className="text-orange-500 mb-2">{skill.icon}</div>
                 <span className="text-gray-700 dark:text-gray-300 font-medium">{skill.name}</span>
@@ -149,9 +148,8 @@ const About: React.FC<AboutProps> = ({ isDarkMode }) => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 * index }}
                 whileHover={{ scale: 1.02, y: -5 }}
-                className={`p-6 rounded-lg shadow-md hover:shadow-lg transition-all ${
-                  isDarkMode ? 'bg-gray-800' : 'bg-white'
-                }`}
+                className={`p-6 rounded-lg shadow-md hover:shadow-lg transition-all ${isDarkMode ? 'bg-gray-800' : 'bg-white'
+                  }`}
               >
                 <h3 className="text-xl font-semibold mb-2">{skill.name}</h3>
                 <p className="text-gray-600 dark:text-gray-300">{skill.description}</p>

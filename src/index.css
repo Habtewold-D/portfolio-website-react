@@ -14,7 +14,7 @@
   }
 
   .glass-dark {
-    @apply bg-black/[0.01] rounded-[3rem];
+    @apply bg-black/5 backdrop-blur-[2px] md:backdrop-blur-sm rounded-[3rem];
     box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05);
   }
 
