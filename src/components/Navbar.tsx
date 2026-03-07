@@ -65,7 +65,6 @@ const Navbar: FC<NavbarProps> = ({ isDarkMode, setIsDarkMode, activeSection, scr
                   label={item.label}
                   isActive={activeSection === item.id}
                   onClick={() => scrollToSection(item.id)}
-                  isDarkMode={isDarkMode}
                   isScrolled={isScrolled}
                 />
               ))}
@@ -157,13 +156,11 @@ const NavLink = ({
   label,
   isActive,
   onClick,
-  isDarkMode,
   isScrolled
 }: {
   label: string;
   isActive: boolean;
   onClick: () => void;
-  isDarkMode: boolean;
   isScrolled: boolean;
 }) => (
   <motion.button
