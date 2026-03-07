@@ -90,9 +90,8 @@ const Contact: FC<ContactProps> = ({ isDarkMode }) => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="space-y-8"
         >
-          <div className={`p-8 rounded-2xl shadow-lg ${
-            isDarkMode ? 'bg-gray-800' : 'bg-white'
-          }`}>
+          <div className={`p-8 rounded-2xl shadow-lg ${isDarkMode ? 'bg-gray-800' : 'bg-white'
+            }`}>
             <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
             <div className="space-y-6">
               <div className="flex items-center gap-4">
@@ -101,7 +100,7 @@ const Contact: FC<ContactProps> = ({ isDarkMode }) => {
                 </div>
                 <div>
                   <p className="text-gray-600 dark:text-gray-400">Phone Number</p>
-                  <p className="font-medium">+251 906624739</p>
+                  <p className="font-medium">+251 901026608</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
@@ -125,9 +124,8 @@ const Contact: FC<ContactProps> = ({ isDarkMode }) => {
             </div>
           </div>
 
-          <div className={`p-8 rounded-2xl shadow-lg ${
-            isDarkMode ? 'bg-gray-800' : 'bg-white'
-          }`}>
+          <div className={`p-8 rounded-2xl shadow-lg ${isDarkMode ? 'bg-gray-800' : 'bg-white'
+            }`}>
             <h3 className="text-2xl font-bold mb-6">Connect With Me</h3>
             <div className="flex justify-center gap-6">
               <motion.a
@@ -175,19 +173,17 @@ const Contact: FC<ContactProps> = ({ isDarkMode }) => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <form onSubmit={handleSubmit} className={`p-8 rounded-2xl shadow-lg space-y-6 ${
-            isDarkMode ? 'bg-gray-800' : 'bg-white'
-          }`}>
+          <form onSubmit={handleSubmit} className={`p-8 rounded-2xl shadow-lg space-y-6 ${isDarkMode ? 'bg-gray-800' : 'bg-white'
+            }`}>
             {/* Status Message */}
             {submitStatus !== 'idle' && (
               <motion.div
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
-                className={`p-4 rounded-lg flex items-center gap-3 ${
-                  submitStatus === 'success'
+                className={`p-4 rounded-lg flex items-center gap-3 ${submitStatus === 'success'
                     ? 'bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200'
                     : 'bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-200'
-                }`}
+                  }`}
               >
                 {submitStatus === 'success' ? (
                   <FaCheck className="text-green-600 dark:text-green-400" />
@@ -206,11 +202,10 @@ const Contact: FC<ContactProps> = ({ isDarkMode }) => {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors ${
-                  isDarkMode 
-                    ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' 
+                className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors ${isDarkMode
+                    ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                }`}
+                  }`}
                 placeholder="Enter your full name"
                 required
                 disabled={isLoading}
@@ -224,11 +219,10 @@ const Contact: FC<ContactProps> = ({ isDarkMode }) => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors ${
-                  isDarkMode 
-                    ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' 
+                className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors ${isDarkMode
+                    ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                }`}
+                  }`}
                 placeholder="Enter your email address"
                 required
                 disabled={isLoading}
@@ -242,11 +236,10 @@ const Contact: FC<ContactProps> = ({ isDarkMode }) => {
                 name="subject"
                 value={formData.subject}
                 onChange={handleChange}
-                className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors ${
-                  isDarkMode 
-                    ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' 
+                className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors ${isDarkMode
+                    ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                }`}
+                  }`}
                 placeholder="Enter subject"
                 required
                 disabled={isLoading}
@@ -260,11 +253,10 @@ const Contact: FC<ContactProps> = ({ isDarkMode }) => {
                 value={formData.message}
                 onChange={handleChange}
                 rows={6}
-                className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors ${
-                  isDarkMode 
-                    ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400' 
+                className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition-colors ${isDarkMode
+                    ? 'bg-gray-700 border-gray-600 text-white placeholder-gray-400'
                     : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
-                }`}
+                  }`}
                 placeholder="Enter your message"
                 required
                 disabled={isLoading}
@@ -275,11 +267,10 @@ const Contact: FC<ContactProps> = ({ isDarkMode }) => {
               whileTap={{ scale: 0.98 }}
               type="submit"
               disabled={isLoading}
-              className={`w-full py-3 px-6 rounded-lg transition-colors font-medium flex items-center justify-center gap-2 ${
-                isLoading
+              className={`w-full py-3 px-6 rounded-lg transition-colors font-medium flex items-center justify-center gap-2 ${isLoading
                   ? 'bg-gray-400 text-gray-600 cursor-not-allowed'
                   : 'bg-orange-500 text-white hover:bg-orange-600'
-              }`}
+                }`}
             >
               {isLoading ? (
                 <>

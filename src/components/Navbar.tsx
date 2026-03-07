@@ -34,94 +34,86 @@ const Navbar: FC<NavbarProps> = ({ isDarkMode, setIsDarkMode, activeSection, scr
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled 
-          ? isDarkMode 
-            ? 'bg-gray-900 shadow-2xl border-b border-gray-700' 
-            : 'bg-white shadow-2xl border-b border-gray-200'
-          : isDarkMode 
-            ? 'bg-gray-900 shadow-lg' 
-            : 'bg-white shadow-lg'
-      }`}
+      className={`fixed w-full z-50 transition-all duration-500 ${isScrolled
+          ? 'py-3 glass shadow-2xl'
+          : 'py-5 bg-transparent'
+        }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
+        <div className="flex justify-between items-center h-14">
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="flex items-center cursor-pointer"
+            className="flex items-center cursor-pointer group"
             onClick={() => scrollToSection('home')}
           >
-            <span className={`text-3xl font-black tracking-wider ${
-              isDarkMode 
-                ? 'bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent' 
-                : 'bg-gradient-to-r from-orange-500 to-orange-700 bg-clip-text text-transparent'
-            }`}>
+            <span className={`text-3xl font-black tracking-tighter transition-all duration-300 ${isScrolled
+                ? 'text-gradient'
+                : 'text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]'
+              }`}>
               Habtewold
             </span>
+            <div className={`ml-1 w-1.5 h-1.5 rounded-full bg-orange-500 opacity-0 group-hover:opacity-100 transition-all ${isScrolled ? 'block' : 'hidden'}`}></div>
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-2">
-            {navItems.map((item) => (
-              <NavLink
-                key={item.id}
-                label={item.label}
-                isActive={activeSection === item.id}
-                onClick={() => scrollToSection(item.id)}
-                isDarkMode={isDarkMode}
-              />
-            ))}
-            
-            {/* Divider */}
-            <div className={`w-px h-6 mx-2 ${
-              isDarkMode ? 'bg-gray-600' : 'bg-gray-300'
-            }`}></div>
-            
-            {/* Theme Toggle */}
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={() => setIsDarkMode(!isDarkMode)}
-              className={`p-3 rounded-xl transition-all duration-300 ${
-                isDarkMode 
-                  ? 'bg-gray-800 text-yellow-400 hover:bg-gray-700 hover:shadow-lg' 
-                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200 hover:shadow-lg'
-              }`}
-            >
-              {isDarkMode ? <FaSun size={18} /> : <FaMoon size={18} />}
-            </motion.button>
+          <div className="hidden md:flex items-center space-x-4">
+            <div className={`flex items-center p-1 rounded-2xl transition-all duration-300 ${isScrolled ? 'bg-black/5 dark:bg-white/5' : ''}`}>
+              {navItems.map((item) => (
+                <NavLink
+                  key={item.id}
+                  label={item.label}
+                  isActive={activeSection === item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  isDarkMode={isDarkMode}
+                  isScrolled={isScrolled}
+                />
+              ))}
+            </div>
+
+            <div className="flex items-center gap-4 ml-4">
+              <div className={`w-px h-8 ${isScrolled ? 'bg-gray-300 dark:bg-gray-700' : 'bg-white/20'}`}></div>
+
+              <motion.button
+                whileHover={{ scale: 1.1, rotate: 180 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={() => setIsDarkMode(!isDarkMode)}
+                className={`p-3 rounded-2xl transition-all duration-300 ${isScrolled
+                    ? 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-yellow-400'
+                    : 'bg-white/10 text-white hover:bg-white/20'
+                  }`}
+              >
+                {isDarkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
+              </motion.button>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center space-x-3">
-            {/* Theme Toggle for Mobile */}
+          <div className="md:hidden flex items-center space-x-4">
             <motion.button
               whileTap={{ scale: 0.9 }}
               onClick={() => setIsDarkMode(!isDarkMode)}
-              className={`p-2 rounded-lg transition-all duration-300 ${
-                isDarkMode 
-                  ? 'bg-gray-800 text-yellow-400' 
-                  : 'bg-gray-100 text-gray-600'
-              }`}
+              className={`p-2 rounded-xl transition-all duration-300 ${isScrolled
+                  ? 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-yellow-400'
+                  : 'bg-white/10 text-white'
+                }`}
             >
-              {isDarkMode ? <FaSun size={16} /> : <FaMoon size={16} />}
+              {isDarkMode ? <FaSun size={18} /> : <FaMoon size={18} />}
             </motion.button>
-            
+
             <button
-              className={`p-2 rounded-lg transition-all duration-300 ${
-                isDarkMode 
-                  ? 'text-white hover:bg-gray-800' 
-                  : 'text-gray-900 hover:bg-gray-100'
-              }`}
+              className={`p-2 rounded-xl transition-all duration-300 ${isScrolled
+                  ? 'text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
+                  : 'text-white hover:bg-white/10'
+                }`}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               <svg
-                className="h-6 w-6"
+                className="h-7 w-7"
                 fill="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth="2"
+                strokeWidth="2.5"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
@@ -139,12 +131,10 @@ const Navbar: FC<NavbarProps> = ({ isDarkMode, setIsDarkMode, activeSection, scr
       {/* Mobile Navigation */}
       <motion.div
         initial={false}
-        animate={{ height: isMobileMenuOpen ? 'auto' : 0 }}
-        className="md:hidden overflow-hidden"
+        animate={{ height: isMobileMenuOpen ? 'auto' : 0, opacity: isMobileMenuOpen ? 1 : 0 }}
+        className="md:hidden overflow-hidden glass"
       >
-        <div className={`px-4 pt-2 pb-4 space-y-1 border-t ${
-          isDarkMode ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'
-        }`}>
+        <div className="px-6 pt-4 pb-8 space-y-2">
           {navItems.map((item) => (
             <MobileNavLink
               key={item.id}
@@ -163,32 +153,40 @@ const Navbar: FC<NavbarProps> = ({ isDarkMode, setIsDarkMode, activeSection, scr
   );
 };
 
-const NavLink = ({ 
-  label, 
-  isActive, 
-  onClick, 
-  isDarkMode 
-}: { 
-  label: string; 
-  isActive: boolean; 
+const NavLink = ({
+  label,
+  isActive,
+  onClick,
+  isDarkMode,
+  isScrolled
+}: {
+  label: string;
+  isActive: boolean;
   onClick: () => void;
   isDarkMode: boolean;
+  isScrolled: boolean;
 }) => (
   <motion.button
-    whileHover={{ scale: 1.05 }}
+    whileHover={{ y: -2 }}
     whileTap={{ scale: 0.95 }}
     onClick={onClick}
-    className={`transition-all duration-300 font-semibold px-4 py-2 rounded-xl ${
-      isActive 
-        ? isDarkMode
-          ? 'text-orange-400 bg-orange-400/10 border border-orange-400/20'
-          : 'text-orange-500 bg-orange-500/10 border border-orange-500/20'
-        : isDarkMode
-          ? 'text-gray-300 hover:text-white hover:bg-gray-800'
-          : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
-    }`}
+    className={`relative px-6 py-2.5 rounded-xl font-bold transition-all duration-300 ${isActive
+        ? isScrolled
+          ? 'text-orange-500 bg-orange-500/10'
+          : 'text-white bg-white/20'
+        : isScrolled
+          ? 'text-gray-500 dark:text-gray-400 hover:text-orange-500'
+          : 'text-white/70 hover:text-white'
+      }`}
   >
     {label}
+    {isActive && (
+      <motion.div
+        layoutId="activeTab"
+        className={`absolute bottom-1 left-6 right-6 h-0.5 rounded-full ${isScrolled ? 'bg-orange-500' : 'bg-white'
+          }`}
+      />
+    )}
   </motion.button>
 );
 
@@ -206,15 +204,14 @@ const MobileNavLink = ({
   <motion.button
     whileTap={{ scale: 0.95 }}
     onClick={onClick}
-    className={`block w-full text-left px-4 py-3 rounded-xl transition-all duration-300 font-semibold ${
-      isActive 
+    className={`block w-full text-left px-4 py-3 rounded-xl transition-all duration-300 font-semibold ${isActive
         ? isDarkMode
           ? 'text-orange-400 bg-orange-400/10 border border-orange-400/20'
           : 'text-orange-500 bg-orange-500/10 border border-orange-500/20'
         : isDarkMode
           ? 'text-gray-300 hover:text-white hover:bg-gray-800'
           : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
-    }`}
+      }`}
   >
     {label}
   </motion.button>

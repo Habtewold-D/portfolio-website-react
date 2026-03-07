@@ -6,4 +6,26 @@
   body {
     @apply bg-gray-50 text-black dark:bg-gray-900 dark:text-white transition-colors duration-300;
   }
-} 
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/10 dark:bg-black/20 backdrop-blur-xl border border-white/20 dark:border-white/10;
+  }
+
+  .glass-dark {
+    @apply bg-black/[0.01] rounded-[3rem];
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .text-shadow-pop {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6), 0 0 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .bg-hero {
+    background-image: url('/images/hero_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
